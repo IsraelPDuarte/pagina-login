@@ -10,6 +10,7 @@ body {
     justify-content: center;
     height: 100vh;
     background-color: #C2E8FF;
+    font-size: 62.5%;
 }
 
 #container {
@@ -65,7 +66,7 @@ body {
     text-align: center;
     font-family: "Roboto", sans-serif;
     font-weight: 700;
-    font-family: 14px/140% ;
+    font-size: 1.2rem;
 }
 .container-logo img {
     width: 32px;
@@ -74,16 +75,15 @@ body {
 
 .rede-icones {
   display: flex; 
-  gap: 20px;   
+  gap: 10px;   
   margin-bottom: 10px;
 }
 
 .rede-icones img {
     width: 24px;
     height: 24px;
+    cursor: pointer;
 }
-
-
 
 .container-baixo {
     background: url(images/img01.png) no-repeat top center/cover;
@@ -92,11 +92,201 @@ body {
     height: 50%;
 }
 
+
+
 #lado-direito {
-    background-color: black;
+    background-color: #F5F5F5;
     width: 41%;
     height: 100%;
+    background-image: url("images/Group\ 14.png");
+    background-repeat: no-repeat;
+    background-position: right top; /* fixa no topo à direita */
+    background-size: 25%;
 }
+
+#container-direito {
+    width: 85%;
+    margin: 40px auto;
+
+    h1 {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #0F1423;
+    margin-bottom: 8px;
+    }
+    h1 span {
+    font-family: 'Inter', sans-serif;
+
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 29px;
+    }
+    p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: #646464;
+    }
+    
+}
+
+label,
+input {
+    cursor: pointer;
+}
+
+.direita-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 100px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 16px;
+    color: #0F1423;
+
+
+}
+
+.direita-logo img {
+    width: 32px;
+    height: 32px;
+}
+
+.contaner-loguin {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    label {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    color: #0F1423;
+    }
+
+    input {
+        font-family: 'Inter', sans-serif;
+        padding: 15px;
+        border: none;
+        
+
+        &::placeholder {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: #D4D4D4;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+
+
+.remember {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.8rem;
+        color: #646464;
+
+        label {
+            padding: 10px 2px;
+        }
+
+        
+    }
+    input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    }
+    a {
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: 0.8rem;
+        text-align: right;
+        color: #646464;
+        text-decoration: none;
+    }
+}
+
+button {
+    padding: 15px 48px;
+    background: #3290FF;
+    border-radius: 12px;
+    width: 100%;
+    border: none;
+    text-align: center;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #FFFFFF;
+    cursor: pointer;
+
+    margin-block: 15px;
+}
+
+.ou {
+    color: #646464;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.login-alternativo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    div {
+        margin-block: 24px 0px;
+        display: flex;
+        gap: 24px;
+    }
+}
+
+.link a {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 0.8rem;
+    text-align: center;
+    color: #646464;
+    
+    span {
+        font-family: 'Inter';
+        font-weight: 700;
+        font-size: 0.8rem;
+        color: #0F1423;
+
+
+    }
+}
+
+
+
+
 
 @media (max-width: 800px) {
 
@@ -107,6 +297,7 @@ body {
     .container-cima {
         width: 90%;
         margin: auto;
+        border-radius: 8px 8px 0px 0px;
     }
 
     #lado-direito {
@@ -115,6 +306,10 @@ body {
 }
 
 @media (max-width: 480px) {
+
+    body {
+        background-color: #ffffff;
+    }
     #container {
         flex-direction: column;
         height: 100vh;
@@ -128,7 +323,9 @@ body {
     }
 
     .container-cima {
-        height: 60%;
+        width: 100%;
+        height: 100%;
+        border-radius: none;
     }
 
     .container-baixo {
@@ -136,7 +333,8 @@ body {
     }
 
     .rede-icones {
-        padding: 5px;
+        padding: 10px;
+        gap: 20px;
     }
 
     .container-logo img {
@@ -145,7 +343,7 @@ body {
     }
 
     .rede-icones img {
-        width: 32px;
-        height: 32px;
+        width: 24px;
+        height: 24px;
     }
 }
