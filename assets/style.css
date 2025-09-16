@@ -1,0 +1,151 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #C2E8FF;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1213px;
+    width: 1213px;
+    height: 760px;
+}
+
+#lado-esquerdo {
+    display: flex;
+    flex-direction: column;
+    width: 59%;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+.container-cima {
+    border-radius: 8px;
+    margin: 15px;
+    width: 96%;
+    height: 45%;
+    
+    object-fit: cover;
+    background: url(images/Rectangle\ 4.png) no-repeat top center/cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-icone {
+
+    width: 100%;
+    height: 90%;
+    margin: 16px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(13.5px);
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;    /* organiza em coluna */
+    align-items: center;       /* centraliza na horizontal */
+}
+
+.container-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin: auto 0;            
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-family: 14px/140% ;
+}
+.container-logo img {
+    width: 32px;
+    height: 32px;
+}
+
+.rede-icones {
+  display: flex; 
+  gap: 20px;   
+  margin-bottom: 10px;
+}
+
+.rede-icones img {
+    width: 24px;
+    height: 24px;
+}
+
+
+
+.container-baixo {
+    background: url(images/img01.png) no-repeat top center/cover;
+
+    width: 100%;
+    height: 50%;
+}
+
+#lado-direito {
+    background-color: black;
+    width: 41%;
+    height: 100%;
+}
+
+@media (max-width: 800px) {
+
+    #lado-esquerdo {
+        width: 40%;
+    }
+
+    .container-cima {
+        width: 90%;
+        margin: auto;
+    }
+
+    #lado-direito {
+        width: 60%;
+    }
+}
+
+@media (max-width: 480px) {
+    #container {
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        
+    }
+    #lado-esquerdo,
+    #lado-direito {
+        width: 90%;
+        margin: auto;
+    }
+
+    .container-cima {
+        height: 60%;
+    }
+
+    .container-baixo {
+        display: none;
+    }
+
+    .rede-icones {
+        padding: 5px;
+    }
+
+    .container-logo img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .rede-icones img {
+        width: 32px;
+        height: 32px;
+    }
+}
