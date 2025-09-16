@@ -314,12 +314,16 @@ button {
         flex-direction: column;
         height: 100vh;
         width: 100%;
-        
     }
     #lado-esquerdo,
     #lado-direito {
-        width: 90%;
+        width: 95%;
         margin: auto;
+        
+    }
+
+    #lado-esquerdo {
+        height: 60%;
     }
 
     .container-cima {
